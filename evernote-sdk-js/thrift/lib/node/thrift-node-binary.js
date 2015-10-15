@@ -145,7 +145,7 @@ exports.NodeBinaryHttpTransport = function(url) {
     });
 
     req.on('socket', function(socket) {
-      socket.setTimeout(30000);
+      socket.setTimeout(100000);
       socket.on('timeout', function() {
         req.abort();
       });
